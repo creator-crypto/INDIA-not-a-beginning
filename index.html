@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India - Detailed States Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #e9ecef;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .content {
+      display: none;
+      padding: 1rem;
+    }
+    .active {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .text-section {
+      flex: 1 1 50%;
+      padding: 1rem;
+    }
+    .map-section {
+      flex: 1 1 45%;
+      padding: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .state-list {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .state {
+      margin-bottom: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>India - States & Union Territories</h1>
+  </header>
+
+  <nav>
+    <button onclick="showPage('page1')">Page 1: About India</button>
+    <button onclick="showPage('page2')">Page 2: States & Map</button>
+  </nav>
+
+  <section id="page1" class="content active">
+    <div class="text-section">
+      <h2>About India</h2>
+      <p>India is a vast South Asian country with diverse terrain – from Himalayan peaks to Indian Ocean coastline – and history reaching back 5 millennia. It has 28 states and 8 union territories.</p>
+      <p>Known for its culture, languages, traditions, and democratic structure, India is the largest democracy in the world and one of the fastest-growing economies.</p>
+    </div>
+  </section>
+
+  <section id="page2" class="content">
+    <div class="text-section state-list">
+      <h2>States and Union Territories</h2>
+      <div class="state"><h3>Andhra Pradesh</h3><p>Capital: Amaravati</p></div>
+      <div class="state"><h3>Arunachal Pradesh</h3><p>Capital: Itanagar</p></div>
+      <div class="state"><h3>Assam</h3><p>Capital: Dispur</p></div>
+      <div class="state"><h3>Bihar</h3><p>Capital: Patna</p></div>
+      <div class="state"><h3>Chhattisgarh</h3><p>Capital: Raipur</p></div>
+      <div class="state"><h3>Goa</h3><p>Capital: Panaji</p></div>
+      <div class="state"><h3>Gujarat</h3><p>Capital: Gandhinagar</p></div>
+      <div class="state"><h3>Haryana</h3><p>Capital: Chandigarh</p></div>
+      <div class="state"><h3>Himachal Pradesh</h3><p>Capital: Shimla</p></div>
+      <div class="state"><h3>Jharkhand</h3><p>Capital: Ranchi</p></div>
+      <div class="state"><h3>Karnataka</h3><p>Capital: Bengaluru</p></div>
+      <div class="state"><h3>Kerala</h3><p>Capital: Thiruvananthapuram</p></div>
+      <div class="state"><h3>Madhya Pradesh</h3><p>Capital: Bhopal</p></div>
+      <div class="state"><h3>Maharashtra</h3><p>Capital: Mumbai</p></div>
+      <div class="state"><h3>Manipur</h3><p>Capital: Imphal</p></div>
+      <div class="state"><h3>Meghalaya</h3><p>Capital: Shillong</p></div>
+      <div class="state"><h3>Mizoram</h3><p>Capital: Aizawl</p></div>
+      <div class="state"><h3>Nagaland</h3><p>Capital: Kohima</p></div>
+      <div class="state"><h3>Odisha</h3><p>Capital: Bhubaneswar</p></div>
+      <div class="state"><h3>Punjab</h3><p>Capital: Chandigarh</p></div>
+      <div class="state"><h3>Rajasthan</h3><p>Capital: Jaipur</p></div>
+      <div class="state"><h3>Sikkim</h3><p>Capital: Gangtok</p></div>
+      <div class="state"><h3>Tamil Nadu</h3><p>Capital: Chennai</p></div>
+      <div class="state"><h3>Telangana</h3><p>Capital: Hyderabad</p></div>
+      <div class="state"><h3>Tripura</h3><p>Capital: Agartala</p></div>
+      <div class="state"><h3>Uttar Pradesh</h3><p>Capital: Lucknow</p></div>
+      <div class="state"><h3>Uttarakhand</h3><p>Capital: Dehradun</p></div>
+      <div class="state"><h3>West Bengal</h3><p>Capital: Kolkata</p></div>
+      <div class="state"><h3>Union Territories</h3><p>Delhi, Chandigarh, Jammu & Kashmir, Ladakh, Lakshadweep, Andaman & Nicobar Islands, Dadra and Nagar Haveli and Daman and Diu, Puducherry</p></div>
+    </div>
+    <div class="map-section">
+      <h2>India Map</h2>
+      <iframe src="https://upload.wikimedia.org/wikipedia/commons/5/55/India_states_and_territories_map.svg"></iframe>
+    </div>
+  </section>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.content').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
